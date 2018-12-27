@@ -1,0 +1,13 @@
+index.erb<br>
+
+your cart:
+<h2><%=cart%></h2>
+
+
+<br>
+
+<%= form_tag('/products/', :method => "post", id: "search-form") do %>
+    <%= text_field_tag :add, params[:wat], placeholder: "add to cart" %>
+    <%= submit_tag "Add", :name => nil %>
+
+<% end %>
